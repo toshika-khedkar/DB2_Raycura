@@ -322,7 +322,7 @@ class Ui_MainWindow(object):
         self.widget_13.setMinimumSize(QSize(0, 25))
         ###########
         
-        self.Category_label = QLabel("Your Category: N/A Your Game: N/A", self.widget_13)
+        self.Category_label = QLabel("Your Class: N/A Your SubClass: N/A", self.widget_13)
         self.gridLayout_4.addWidget(self.Category_label)
         self.gridLayout_4.addWidget(self.widget_13)
         ###########
@@ -386,26 +386,26 @@ class Ui_MainWindow(object):
         self.horizontalLayout_5 = QHBoxLayout(self.widget_15)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
         self.pushButton_6 = QPushButton(self.widget_15)
-        self.pushButton_6.clicked.connect(lambda: self.updateLabel("Neck", "Snake Game")) 
+        self.pushButton_6.clicked.connect(lambda: self.updateLabel("Joint", "Hinge Joint(el)")) 
         self.pushButton_6.setMaximumSize(QSize(16777215, 369))
         #  stylesheet 
-        self.pushButton_6.setStyleSheet(f"QPushButton {{ background-image: url(cutsnake.jpg) ; background-position: center; background-repeat: no-repeat; background-size: cover;}}")
+        self.pushButton_6.setStyleSheet(f"QPushButton {{ background-image: url(HingeJoint.png) ; background-position: center; background-repeat: no-repeat; background-size: cover;}}")
         self.horizontalLayout_5.addWidget(self.pushButton_6)
 
         self.pushButton_7 = QPushButton(self.widget_15)
-        self.pushButton_7.clicked.connect(lambda: self.updateLabel("Neck", "Flappy Bird")) 
+        self.pushButton_7.clicked.connect(lambda: self.updateLabel("Joint", "Condyloid Joint(wrist)")) 
         self.pushButton_7.setObjectName(u"pushButton_7")
         self.pushButton_7.setMaximumSize(QSize(16777215, 369))
-        self.pushButton_7.setStyleSheet(f"QPushButton {{ background-image: url(flappyBird.jpg) ; background-position: center; background-repeat: no-repeat; background-size: cover;}};background-color:rgb(255, 192, 193);"
+        self.pushButton_7.setStyleSheet(f"QPushButton {{ background-image: url(CondyloidJ.png) ; background-position: center; background-repeat: no-repeat; background-size: cover;}};background-color:rgb(255, 192, 193);"
 "border-radius:10px;")
 
         self.horizontalLayout_5.addWidget(self.pushButton_7)
 
         self.pushButton_8 = QPushButton(self.widget_15)
-        self.pushButton_8.clicked.connect(lambda: self.updateLabel("Neck", "Angry Bird")) 
+        self.pushButton_8.clicked.connect(lambda: self.updateLabel("Joint", "Ball And Socket Joint(sh)")) 
         self.pushButton_8.setObjectName(u"pushButton_8")
         self.pushButton_8.setMaximumSize(QSize(16777215, 369))
-        self.pushButton_8.setStyleSheet(f"QPushButton {{ background-image: url(AngryBird.png) ; background-position: center; background-repeat: no-repeat; background-size: cover;}};background-color:rgb(255, 192, 193);"
+        self.pushButton_8.setStyleSheet(f"QPushButton {{ background-image: url(ballNsocket.png) ; background-position: center; background-repeat: no-repeat; background-size: cover;}};background-color:rgb(255, 192, 193);"
 "border-radius:10px;")
 
         self.horizontalLayout_5.addWidget(self.pushButton_8)
@@ -413,7 +413,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_6.addWidget(self.widget_15)
 
-        self.toolBox.addItem(self.page_3, u"Knee")
+        self.toolBox.addItem(self.page_3, u"Joint")
         self.page_4 = QWidget()
         self.page_4.setObjectName(u"page_4")
         self.page_4.setGeometry(QRect(0, 0, 348, 63))
@@ -1115,10 +1115,10 @@ class Ui_MainWindow(object):
         self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
         self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
         self.toolBox.setItemText(self.toolBox.indexOf(self.page), QCoreApplication.translate("MainWindow", u"Neck", None))
-        self.pushButton_6.setText(QCoreApplication.translate("MainWindow", u"Snake Game", None))
-        self.pushButton_7.setText(QCoreApplication.translate("MainWindow", u"Flappy Bird", None))
-        self.pushButton_8.setText(QCoreApplication.translate("MainWindow", u"Angry Bird", None))
-        self.toolBox.setItemText(self.toolBox.indexOf(self.page_3), QCoreApplication.translate("MainWindow", u"Knee", None))
+        self.pushButton_6.setText(QCoreApplication.translate("MainWindow", u"Hinge Joint", None))
+        self.pushButton_7.setText(QCoreApplication.translate("MainWindow", u"Condyloid Joint", None))
+        self.pushButton_8.setText(QCoreApplication.translate("MainWindow", u"Ball And Socket Joint", None))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page_3), QCoreApplication.translate("MainWindow", u"Joint", None))
         self.pushButton_9.setText(QCoreApplication.translate("MainWindow", u"1", None))
         self.pushButton_10.setText(QCoreApplication.translate("MainWindow", u"2", None))
         self.pushButton_11.setText(QCoreApplication.translate("MainWindow", u"3", None))
@@ -1174,7 +1174,7 @@ class Ui_MainWindow(object):
         self.pushButton_75.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
         self.pushButton_76.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
         self.toolBox_3.setItemText(self.toolBox_3.indexOf(self.page_15), QCoreApplication.translate("MainWindow", u"13-9-23", None))
-        self.Game.setTabText(self.Game.indexOf(self.Assignment), QCoreApplication.translate("MainWindow", u"Assignment", None))
+        self.Game.setTabText(self.Game.indexOf(self.Assignment), QCoreApplication.translate("MainWindow", u"Analysis", None))
         
         self.conn = sqlite3.connect('user09.db')
         self.create_table()
@@ -1244,9 +1244,7 @@ class Ui_MainWindow(object):
         
         self.Game.setStyleSheet(selected_tab_stylesheet)
         self.selected_user_label.setText(f"Selected User: {new_tab_name} >>") 
-#         self.selected_user_name(new_tab_name)
-#     def selected_user_name(self,new_tab_name2): 
-#         self.Patient.setTabText(new_tab_name2)        
+      
     
     
     def search_users(self):
@@ -1342,7 +1340,11 @@ class Ui_MainWindow(object):
         
     def updateLabel(self, category, button_name):
             # Update the label text when a button is clicked
-        self.Category_label.setText(f"Selected Category: {category} >>Selected Game: {button_name}")
+        currIndex=self.Game.currentIndex()
+        self.Game.setTabText(currIndex, "Exercise:"+str(category))
+        self.Game.setTabText(currIndex+1, "Game:"+str(button_name))
+        self.Category_label.setText(f"Selected Class: {category} >>Selected SubClass: {button_name}")
+        
 
     
 class UserDialog(QDialog):
